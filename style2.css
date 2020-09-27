@@ -1,0 +1,162 @@
+* {
+    font-family: 'Roboto', sans-serif;;
+}
+
+body {
+    margin: 0;
+    background-color: #333;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px; 
+    background-color: #000;
+    height: 60px;
+}
+
+.menu img {
+    width: 140px;
+}
+
+.navigation a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+
+    margin-left: 10px;
+}
+
+.navigation a:hover {
+    color: #DDD;
+    transition: 0.3s;
+}
+
+/* Main */
+main .container {
+    width: 100%;
+    margin: 15px auto;
+}
+
+.filmes {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    
+    display: grid;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "filme-1 filme-2 filme-3 filme-4" "filme-5 filme-6 filme-7 filme-8";
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.filmes img:hover {
+    transition: 0.6s;
+    transform: translateY(-8px);
+}
+
+.filme-1 {
+    grid-area: filme-1;
+}
+
+.filme-2 {
+    grid-area: filme-2;
+}
+
+.filme-3 {
+    grid-area: filme-3;
+}
+
+.filme-4 {
+    grid-area: filme-4;
+}
+
+.filme-5 {
+    grid-area: filme-5;
+}
+
+.filme-6 {
+    grid-area: filme-6;
+}
+
+/* .filmes {
+    background-color: red;
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    align-self: center;
+} */
+
+.filmes img {
+    width: 160px;
+    height: 230px;
+    margin-left: 10px;
+    border-radius: 3%;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background-color: #000;
+    color: #fff;
+}
+
+footer .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.footer-img img {
+    width: 26px;
+    margin-left: 2%;
+}
+
+.footer-copyright {
+    padding-bottom: 8px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .filmes {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        
+        display: grid;
+        grid-row-gap: 15px;
+        grid-column-gap: 15px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas: "filme-1" "filme-2" "filme-3" "filme-4" "filme-5" "filme-6" "filme-7" "filme-8";
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer {
+        position: absolute;
+        width: 100%;
+    }
+}
