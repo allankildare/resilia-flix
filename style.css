@@ -2,9 +2,16 @@
     font-family: 'Roboto', sans-serif;;
 }
 
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
+    position: relative;
     margin: 0;
     background-color: #333;
+    height: 100%;
 }
 
 .menu {
@@ -85,18 +92,6 @@ main .container {
     grid-area: filme-6;
 }
 
-/* .filmes {
-    background-color: red;
-    width: 80%;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    align-self: center;
-} */
-
 .filmes img {
     width: 160px;
     height: 230px;
@@ -115,7 +110,6 @@ footer {
 }
 
 footer .container {
-    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -156,7 +150,6 @@ footer .container {
     }
 
     footer {
-        position: absolute;
-        width: 100%;
+        display: none;
     }
 }
